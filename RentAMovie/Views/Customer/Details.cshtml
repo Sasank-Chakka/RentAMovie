@@ -1,0 +1,29 @@
+﻿@model RentAMovie.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Details</h2>
+<ul>
+    <li>
+        Customer ID:@Model.id
+    </li>
+    <li>
+        Name:@Model.name
+    </li>
+    <li>
+        Date Of Birth:@Model.DateOfBirth.ToShortDateString()
+    </li>
+
+    <li>
+        Membership Type:@Model.MembershipType.MembershipTypeName
+        </li>
+    <li>
+        Duration:@Model.MembershipType.Amount
+    </li>
+    <li>
+        Discount:@Model.MembershipType.Discount
+    </li>
+</ul>
+
